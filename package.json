@@ -5,17 +5,27 @@
   "main": "index.js",
   "scripts": {
     "test": "pnpm vitest",
-    "format":"pnpm @biomejs/biome format --write ./src",
-    "lint":"pnpm @biomejs/biome lint --write ./src",
-    "check":"pnpm @biomejs/biome check --write ./src"
+    "format": "pnpm @biomejs/biome format --write ./src",
+    "lint": "pnpm @biomejs/biome lint --write ./src",
+    "check": "pnpm @biomejs/biome check --write ./src",
+    "crawl":"pnpm tsx src/index.mts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@biomejs/biome": "1.8.0",
+    "@types/node": "^20.14.2",
     "lefthook": "^1.6.15",
+    "tsx": "^4.13.3",
     "typescript": "^5.4.5",
     "vitest": "^1.6.0"
+  },
+  "dependencies": {
+    "@types/jsdom": "^21.1.7",
+    "jsdom": "^24.1.0"
+  },
+  "engines": {
+    "node": "^22.0.0"
   }
 }
